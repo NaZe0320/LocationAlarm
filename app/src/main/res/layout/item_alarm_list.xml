@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_margin="@dimen/item_margin"
+        android:padding="@dimen/item_margin"
+        android:background="@drawable/shape_rectangle_round_12dp">
+
+        <TextView
+            android:id="@+id/tv_title_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/item_title_text_size"
+            android:text="알람명"
+            app:text="알람명"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_item">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_time_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/item_time_text_size"
+            android:textStyle="bold"
+            android:text="00:00"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_item"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_condition">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/item_condition_text_size"
+            android:text="알람명"
+            app:text="알람명"
+            app:layout_constraintTop_toBottomOf="@id/tv_time_item"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_alarm_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3월 31일"
+            app:layout_constraintEnd_toEndOf="@id/tb_onWork"
+            app:layout_constraintStart_toStartOf="@id/tb_onWork"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tb_onWork"/>
+
+        <ToggleButton
+            android:id="@+id/tb_onWork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_alarm_date"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
