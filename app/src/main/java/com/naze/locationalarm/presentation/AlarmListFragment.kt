@@ -6,7 +6,9 @@ import android.view.View
 import com.naze.locationalarm.R
 import com.naze.locationalarm.databinding.FragmentAlarmListBinding
 import com.naze.locationalarm.util.binding.BindingFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AlarmListFragment : BindingFragment<FragmentAlarmListBinding>(R.layout.fragment_alarm_list) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
